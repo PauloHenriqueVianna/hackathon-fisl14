@@ -1,0 +1,23 @@
+body{
+	padding-top:60px;
+}
+
+@media (max-width: 767px){
+	body{padding-top:0;}
+}
+
+.logo{
+	width: 40%;
+	height: 40%;
+	margin-left: 5%;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	opacity: 0.5;
+}
+
+
+.logo:hover{
+	opacity: 1;
+}

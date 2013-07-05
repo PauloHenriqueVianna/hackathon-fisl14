@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>{% block title %}GeoLiberty{% endblock %}</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Paulo Henrique Vianna, Antônio Augusto Foletto" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		
+		<link rel="stylesheet" href="/assets/css/bootstrap.css">
+		<link rel="stylesheet" href="/assets/css/geoliberty.css">
+		{% block styles %}{% endblock %}
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<header>
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						<a href="/" class="brand">{% block brand %}GeoLiberty{% endblock %}</a>
+						<p class="navbar-text">
+							{% block brand-text %}
+							{% endblock %}
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<nav>
+					<div class="span3">
+						<div class="well" style="padding: 8px 0;">
+							<ul class="nav nav-list">
+								{% block menu-geoliberty %}
+								<li class="nav-header">
+									Mapas GeoLiberty
+								</li>
+								<!--<li class="active">-->
+									<a href="/paises/">Países</a>
+								</li>
+								<li>
+									<a href="/regioes/">Regiões</a>
+								</li>
+								<li>
+									<a href="/estados/">Estados</a>
+								</li>
+								<li>
+									<a href="/mesorregioes/">Mesorregiões</a>
+								</li>
+								<li>
+									<a href="/microrregioes/">Microrregiões</a>
+								</li>
+								<li>
+									<a href="/municipios/">Municípios</a>
+								</li>
+								<li>
+									<a href="/geopoliticas">Regiões Geopolíticas</a>
+								</li>
+								<li>
+									<br><br>
+								</li>
+								<li>
+									<a href="/admin">Administração</a>
+								</li>
+								{% endblock %}
+								
+								{% block menu %}
+								{% endblock %}
+							</ul>
+						</div>
+						<hr />
+						<p>Desenvolvimento<br><a href="http://lattes.cnpq.br/4272110622915194" target="_blank">Antônio Augusto Foletto</a><br><a href="http://lattes.cnpq.br/1647735520908049" target="_blank">Paulo Henrique Vianna</a></p>
+						<p>Orientação<br><a href="http://lattes.cnpq.br/3226063681432550" target="_blank">Joel da Silva</p>
+						<br>
+						<a href="http://www.cafw.ufsm.br" target="_blank"><img class="logo" src="/assets/img/cafw.png"></a>
+						<a href="http://www.ufsm.br" target="_blank"><img class="logo" src="/assets/img/ufsm.png"></a>
+					</div>
+				</nav>
+				<div class="span9">
+					<div class="container-fluid">
+						<div class="page-header">
+							<h1>{% block page-header %}GeoLiberty{% endblock%} <small>{%block page-header-small%}Liberdade Cartográfica{%endblock%}</small></h1>
+						</div>
+						{% block conteudo %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			
+		</footer>
+	</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="/assets/js/bootstrap.js"></script>
+	{% block scripts %}{% endblock %}
+</html>

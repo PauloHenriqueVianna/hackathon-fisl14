@@ -1,0 +1,9 @@
+ol > li:hover{
+	background-color: #E8E8E8;
+}
+
+.zelect{
+	width: 70%;
+	cursor: pointer
+}
+
