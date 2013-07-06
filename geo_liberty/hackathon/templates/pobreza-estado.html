@@ -23,9 +23,6 @@
 		.b{
 			color: red;
 		}
-		.direita{
-			text-align: right;
-		}
 	</style>
 {% endblock %}
 {% block conteudo %}
@@ -33,28 +30,53 @@
 		<div id="map" style="width: 100%; height: 500px;"></div>
 	</div><hr>
 	<div class="row-fluid">
-		<div class="span12 direita">	
-			<p>* População Considerada Pobre</p>
-		</div>
-	</div>
-	<div class="row-fluid">
 		<div class="span12">
 			<div class="span4">
+				<div class="accordion" id="accordion2">
+					  <div class="accordion-group">
+					    <div class="accordion-heading">
+					      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+					        Estado 1
+					      </a>
+					    </div>
+					    <div id="collapseOne" class="accordion-body collapse">
+					      <div class="accordion-inner">
+					        Município 1
+					      </div>
+					      <div class="accordion-inner">
+					        Município 2
+					      </div>
+					    </div>
+					  </div>
+					  <div class="accordion-group">
+					    <div class="accordion-heading">
+					      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+					        Estado 2
+					      </a>
+					    </div>
+					    <div id="collapseTwo" class="accordion-body collapse">
+					      <div class="accordion-inner">
+					        Município 1
+					      </div>
+					      <div class="accordion-inner">
+					        Município 2
+					      </div>
+					    </div>
+					  </div>
+					</div>
 				<h3 class="a">Faixa Alta</h3><hr>
 				<table class="table table-bordered table-hover alta">
 				  <thead>
 				    <tr>
 				      <th>Município</th>
-				      <th>UF</th>
 				      <th>População</th>
-				      <th>PCP*</th>
+				      <th>PCP</th>
 				    </tr>
 				  </thead>
 				  <tbody>
 				  {% for d in dadosbfr %}
 				    <tr>
 				      <td>{{d.nome}}</td>
-				      <td>{{d.cod_ibge.microRegiao.mesoRegiao.uf.sigla}}</td>
 				      <td>{{d.populacao}}</td>
 				      <td>{{d.pobres_total}}</td>
 				    </tr>
@@ -68,16 +90,14 @@
 				  <thead>
 				    <tr>
 				      <th>Município</th>
-				      <th>UF</th>
 				      <th>População</th>
-				      <th>PCP*</th>
+				      <th>PCP</th>
 				    </tr>
 				  </thead>
 				  <tbody>
 				  {% for d in dadosbfm %}
 				    <tr>
 				      <td>{{d.nome}}</td>
-				      <td>{{d.cod_ibge.microRegiao.mesoRegiao.uf.sigla}}</td>
 				      <td>{{d.populacao}}</td>
 				      <td>{{d.pobres_total}}</td>
 				    </tr>
@@ -91,16 +111,14 @@
 				  <thead>
 				    <tr>
 				      <th>Município</th>
-				      <th>UF</th>
 				      <th>População</th>
-				      <th>PCP*</th>
+				      <th>PCP</th>
 				    </tr>
 				  </thead>
 				  <tbody>
 				  {% for d in dadosbfp %}
 				    <tr>
 				      <td>{{d.nome}}</td>
-				      <td>{{d.cod_ibge.microRegiao.mesoRegiao.uf.sigla}}</td>
 				      <td>{{d.populacao}}</td>
 				      <td>{{d.pobres_total}}</td>
 				    </tr>

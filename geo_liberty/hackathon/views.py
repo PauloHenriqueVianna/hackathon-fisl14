@@ -25,17 +25,11 @@ def Pobreza(request):
 		#e.indice = Decimal(e.indice)
 	for m in dadosbfm:
 		m.cod_ibge.mpoly.transform(ct)
-		print m.cod_ibge.mpoly
 		#m.indice = Decimal(e.indice)
 	return render_to_response('pobreza.html', RequestContext(request,{'dadosbfr':dadosbfr, 'dadosbfp': dadosbfp, 'dadosbfm': dadosbfm}))
 
-
-def Vagas(request,id_municipio):
-
-	dadosbf = DadosBF.objects.filter(cod_ibge = id_municipio)
-	#vagas = 
-	for d in dadosbf:
-		if(d.populacao != None and d.pobres_total != None):
-			d.indice = d.populacao / d.pobres_total
-	
-	return render_to_response('pobreza.html', RequestContext(request,{'dadosbf':dadosbf}))
+def PobrezaEstado(request,id_estado=None):
+	if id_estado != None:
+		return render_to_response('pobreza-estado.html', RequestContext(request,{}))
+	else:
+		return render_to_response('pobreza-estado.html', RequestContext(request,{}))
