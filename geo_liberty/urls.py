@@ -8,7 +8,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        
      url(r'^admin/', include(admin.site.urls)),
-     url(r'^upload/$',upload),
      url(r'^$',Inicio),
      url(r'^paises/$',Paises),
      url(r'^paises/pais/(?P<id_pais>\d+)/$',Mapa_Pais),
@@ -25,6 +24,7 @@ urlpatterns = patterns('',
      url(r'^geopoliticas/$',RegioesGeopoliticas),
      url(r'^geopoliticas/geopolitica/(?P<id_geopolitica>\d+)/$',RegiaoGeopolitica),
      url(r'^chaining/', include('smart_selects.urls')),
+     url(r'^hackathon/', include('hackathon.urls')),
      # Required to make static serving work 
      url(r'^assets/(?P<path>.*)$', 'django.views.static.serve', {
             'document_root': settings.MEDIA_ROOT,

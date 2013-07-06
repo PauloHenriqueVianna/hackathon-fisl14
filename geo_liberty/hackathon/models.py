@@ -33,4 +33,5 @@ class DadosBF(models.Model):
 	pobres_urbano = models.IntegerField()
 	pobres_rural = models.IntegerField()
 	pobres_total = models.IntegerField()
+	indice = models.DecimalField(max_digits=64,decimal_places=64)
 
