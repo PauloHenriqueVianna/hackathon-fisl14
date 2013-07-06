@@ -7,7 +7,12 @@
 	<li class="nav-header">Consultas</li>
 	<li><a class="consultar" href="/hackathon">Início</a></li>
 	<li><a class="consultar" href="/hackathon/pobreza">Faixas Sociais Municípios</a></li>
-	<li><a class="consultar" href="/hackathon/pobreza-estado">Faixas Sociais Municípios por Estado</a></li>
+	<li><a class="consultar" href="#">Faixas Sociais Municípios por Estado</a></li>
+	<ul class="nav nav-list">
+		{% for uf in ufs %}
+		<li><a href="/hackathon/pobreza-estado/{{ uf.id }}">{{ uf.uf }}</a></li>
+		{% endfor %}
+	</ul>
 </ul>
 {% endblock %}
 {% block desenvolvimento %}

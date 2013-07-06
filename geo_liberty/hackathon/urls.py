@@ -5,5 +5,5 @@ from views import Inicio, Pobreza, PobrezaEstado
 urlpatterns = patterns('hackathon',
     url(r'^$', Inicio),
     url(r'^pobreza/$',Pobreza),
-    url(r'^pobreza-estado/$',PobrezaEstado),
+    url(r'^pobreza-estado/(?P<id_uf>\d+)',PobrezaEstado),
 )

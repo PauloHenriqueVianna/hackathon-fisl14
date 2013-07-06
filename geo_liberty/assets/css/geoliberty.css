@@ -2,6 +2,10 @@ body{
 	padding-top:60px;
 }
 
+a{
+	cursor: pointer;
+}
+
 @media (max-width: 767px){
 	body{padding-top:0;}
 }
