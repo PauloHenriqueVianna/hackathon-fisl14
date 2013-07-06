@@ -4,10 +4,10 @@ from django.template import RequestContext
 from django.contrib.gis.gdal import SpatialReference,CoordTransform
 from django.contrib.auth import authenticate, login, logout
 from geo_liberty.models import Municipio
-from hackathon.models import Pactuacoes, DadosBF
+from hackathon.models import DadosBF
 from decimal import *
 
-def Index(request):
+def Inicio (request):
 	
 	return render_to_response('index.html', RequestContext(request,{}))
 
